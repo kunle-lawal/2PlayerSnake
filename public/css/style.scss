@@ -1,0 +1,114 @@
+@import 'global.scss';
+
+canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #0b0c0e;
+}
+
+.gameInfo {
+    text-align: center;
+}
+
+h2 {
+    color: white;
+}
+
+#player1Info {
+    float: left;
+    margin-left: 100px;
+}
+
+#player2Info {
+    float: right;
+    margin-right: 100px;
+}
+
+.playerInfo {
+    .score_container {
+        position: relative;
+
+        @keyframes hover {
+            0% {
+                transform: translateY(-10px);
+            }
+
+            80% {
+                transform: translateY(-20px);
+            }
+
+            99% {
+                opacity: 0;
+            }
+
+            100% {
+                display: none;
+            }
+        }
+
+        .plus {
+            position: absolute;
+            color: white;
+            right: 0;
+            z-index: 999;
+
+            animation: hover 1s;
+            animation-fill-mode: forwards;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        h4 {
+            color: red;
+        }
+
+        .lives {
+            color: white;
+            background-color: pink;
+            border-radius: 30px;
+            margin: 0;
+            padding: 5px 10px;
+            display: inline-block;
+
+            .full {
+                color: red;
+            }
+        }
+    }
+}
+
+.choosePlayer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid #0b0c0e; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .player {
+        border: 1px solid white;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 10px 20px;
+
+        &:hover {
+            background-color: black;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        h2 {
+            margin: initial;
+        }
+    }
+}
+

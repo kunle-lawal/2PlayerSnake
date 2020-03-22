@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Lato:900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+/*FONTS*/
+$quicksand: 'Quicksand',
+sans-serif;
+$lato: 'Lato',
+sans-serif;
+$open: 'Open Sans',
+sans-serif;
+$grate: 'Darker Grotesque',
+sans-serif;
+$anton: 'Anton',
+sans-serif;
+$right: 'Righteous',
+cursive;
+
+@mixin test-borders($color) {
+    // border: 1px solid $color;
+}
+
+/* COLOR PALLET */
+$nav_color: #222222;
+$body_color: #ffffff;
+$nav_lines: #8f8e8e;
+$nav_lines_shade1: #f5f2f2;
+$nav_lines_shade3: #cac9c9;
+$main_background_color: #23272e;
+
+/* Social Colors */
+
+/* MEDIA QUERY BREAK POINTS */
+$break-xsm: 700px;
+$break-sm: 838px;
+$break-med: 1258px;
+$break-large: 1440px;
+$break-xlarge: 1680px;
+
+/*Main Font-sizes*/
+$h1-font: 60px;
+$h2-font: 30px;
+$h3-font: 25px;
+$h4-font: 15px;
+$p-font: 18px;
+
+body {
+    background-color: $body_color;
+}
+
+@mixin screen-size($media) {
+
+    @if $media==small {
+
+        @media only screen and (max-width: $break-xsm) {
+            @content;
+        }
+
+    }
+
+    @else if $media==iPadProLand {
+
+        @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $media==iPadLand {
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $media==iPad {
+
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+            @content;
+
+        }
+
+    }
+
+    @else if $media==kindaSmall {
+
+        @media only screen and (min-width: $break-xsm + 1) and (max-width: $break-sm - 1) {
+            @content;
+        }
+
+    }
+
+    @else if $media==medium {
+
+        @media only screen and (min-width: $break-xsm + 1) and (max-width: $break-med - 1) {
+            @content;
+        }
+
+    }
+
+    @else if $media==large {
+
+        @media screen and (min-width: $break-med + 1) and (max-width: $break-large) {
+            @content;
+        }
+
+    }
+
+    @else if $media==xlarge {
+
+        @media screen and (min-width: $break-large + 1) {
+            @content;
+        }
+
+    }
+
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    color: white;
+}
+
+button {
+    font-family: "Quicksand", sans-serif;
+}
+
+.button-input {
+    transition: opacity 0.2s;
+}
+
+.disable {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.btn-post {
+    background-color: $nav_color;
+    color: white;
+    width: auto;
+    min-height: 10px;
+    // float:right;
+    margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.btn-large {
+    // background-color: #222 !important;
+    // box-shadow: 2px 2px 2px #222, 2px 2px 2px #222;
+    transition: all 0.2s;
+    width: inherit;
+    position: relative;
+    top: 0px;
+    width: 200px;
+    background-color: $nav_color !important;
+    // font-weight: 100 !important;
+
+    // &:hover {
+    //     // box-shadow: 2px 2px 3px #222, 2px 2px 2px #222;
+    //     position: relative;
+    //     top: 1px;
+    // }
+
+    &:active {
+        // box-shadow: 1px 1px 0px #222, 1px 1px 0px #222;
+        position: relative;
+        top: 3px;
+    }
+}
+
+.input-field {
+    input {
+        &:focus {
+            border-bottom: 1px solid $nav_color !important;
+            box-shadow: 0 1px 0 0 $nav_color !important;
+        }
+    }
+
+    textarea {
+        &:focus {
+            // border-bottom:1px solid $nav_color !important;
+            // box-shadow: 0 1px 0 0 $nav_color !important;
+        }
+    }
+
+    .active {
+        color: $nav_color !important;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+@mixin noSelect() {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+
+i {
+    height: initial !important;
+}
+
+label {
+    font-family: 'Quicksand', sans-serif;
+    width: initial !important;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+}
+
+h1 {
+    font-size: $h1-font;
+    line-height: $h1-font + 5;
+    font-family: 'Lato', sans-serif;
+
+    @include screen-size(small) {
+        font-size: $h1-font/1.6;
+        line-height: ($h1-font+5)/1.6;
+    }
+
+    @include screen-size(medium) {
+        font-size: $h1-font/1.5;
+        line-height: ($h1-font+5)/1.5;
+    }
+}
+
+h2 {
+    font-size: $h2-font;
+    line-height: $h2-font + 5;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+    @include screen-size(small) {
+        font-size: $h2-font - 4;
+        line-height: ($h2-font/2)+5;
+    }
+}
+
+h3 {
+    font-size: $h3-font;
+    line-height: $h3-font+5;
+    font-family: 'Quicksand', sans-serif;
+
+    @include screen-size(small) {
+        font-size: $h3-font/1.7;
+    }
+
+    @include screen-size(medium) {
+        font-size: $h3-font/1.5;
+    }
+}
+
+h4 {
+    font-size: $h4-font;
+    line-height: $h4-font+5;
+    font-weight: 100;
+    font-family: 'Quicksand', sans-serif;
+    color: #efefef;
+    color: hsl(214, 7%, 47%);
+}
+
+p {
+    font-size: $p-font;
+    line-height: $p-font + 5;
+    font-weight: 300;
+    font-family: $quicksand;
+
+    @include screen-size(small) {
+        font-size: $p-font - 4;
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: $nav_color;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    font-family: $quicksand !important;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    top: -15px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $nav_color transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    top: -30px;
+}
+
+.display_none {
+    display: none !important;
+}
+
+// materialize UI overrides
+
+strong {
+    font-weight: bold;
+}

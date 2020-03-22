@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Lato:900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Darker+Grotesque:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+/*FONTS*/
+/* COLOR PALLET */
+/* Social Colors */
+/* MEDIA QUERY BREAK POINTS */
+/*Main Font-sizes*/
+body {
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  color: white;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+}
+
+.button-input {
+  transition: opacity 0.2s;
+}
+
+.disable {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.btn-post {
+  background-color: #222222;
+  color: white;
+  width: auto;
+  min-height: 10px;
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.btn-large {
+  transition: all 0.2s;
+  width: inherit;
+  position: relative;
+  top: 0px;
+  width: 200px;
+  background-color: #222222 !important;
+}
+.btn-large:active {
+  position: relative;
+  top: 3px;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #222222 !important;
+  box-shadow: 0 1px 0 0 #222222 !important;
+}
+.input-field .active {
+  color: #222222 !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+i {
+  height: initial !important;
+}
+
+label {
+  font-family: "Quicksand", sans-serif;
+  width: initial !important;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+
+.logo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 65px;
+  font-family: "Lato", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 37.5px;
+    line-height: 40.625px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  h1 {
+    font-size: 40px;
+    line-height: 43.3333333333px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 35px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (max-width: 700px) {
+  h2 {
+    font-size: 26px;
+    line-height: 20px;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Quicksand", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  h3 {
+    font-size: 14.7058823529px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  h3 {
+    font-size: 16.6666666667px;
+  }
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 100;
+  font-family: "Quicksand", sans-serif;
+  color: #efefef;
+  color: #6f7780;
+}
+
+p {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 300;
+  font-family: "Quicksand", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #222222;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  font-family: "Quicksand", sans-serif !important;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  top: -15px;
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #222222 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  top: -30px;
+}
+
+.display_none {
+  display: none !important;
+}
+
+strong {
+  font-weight: bold;
+}
+
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #0b0c0e;
+}
+
+.gameInfo {
+  text-align: center;
+}
+
+h2 {
+  color: white;
+}
+
+#player1Info {
+  float: left;
+  margin-left: 100px;
+}
+
+#player2Info {
+  float: right;
+  margin-right: 100px;
+}
+
+.playerInfo .score_container {
+  position: relative;
+}
+@keyframes hover {
+  0% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-20px);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+.playerInfo .score_container .plus {
+  position: absolute;
+  color: white;
+  right: 0;
+  z-index: 999;
+  animation: hover 1s;
+  animation-fill-mode: forwards;
+}
+.playerInfo .score_container h2 {
+  color: white;
+}
+.playerInfo .score_container h4 {
+  color: red;
+}
+.playerInfo .score_container .lives {
+  color: white;
+  background-color: pink;
+  border-radius: 30px;
+  margin: 0;
+  padding: 5px 10px;
+  display: inline-block;
+}
+.playerInfo .score_container .lives .full {
+  color: red;
+}
+
+.choosePlayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid #0b0c0e; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.choosePlayer .player {
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px 20px;
+}
+.choosePlayer .player:hover {
+  background-color: black;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.choosePlayer .player h2 {
+  margin: initial;
+}
+
+/*# sourceMappingURL=style.css.map */

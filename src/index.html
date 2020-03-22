@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0-alpha1.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Snake</title>
+</head>
+
+<body style="background-color: #23272e;">
+    <div class="gameInfo">
+        <div class="title">
+            <h2>Snake <span>1</span></h2>
+        </div>
+    </div>
+    <div id="player1Info" class="playerInfo">
+        <div class="score_container">
+            <div class="addScore1">
+                
+            </div>
+            <h2>Score: <span class="score" id='score1'>0</span></h2>
+            <div class="lives" id="player1">
+                <i class="fas fa-heart full" id="heart1"></i>
+                <i class="fas fa-heart full" id="heart2"></i>
+                <i class="fas fa-heart full" id="heart3"></i>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas" width="700px" height="700px" style="background-color: #23272e"></canvas>
+    <div class="choosePlayer">
+        <div class="player" id="1">
+            <h2>Player 1</h2>
+        </div>
+
+        <div class="player" id="2">
+            <h2>Player 2</h2>
+        </div>
+    </div>
+    <div id="player2Info" class="playerInfo">
+        <div class="score_container">
+            <div class="addScore2">
+            
+            </div>
+            <h2>Score: <span class="score" id="score2">0</span></h2>
+            <div class="lives" id="lives2">
+                <i class="fas fa-heart full" id="heart1"></i>
+                <i class="fas fa-heart full" id="heart2"></i>
+                <i class="fas fa-heart full" id="heart3"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+    <script src="script.js"></script>
+    <script src="snakeUI.js"></script>
+    <!-- <div class="fpsCounter">fps: <span class="fps">60</span></div> -->
+</body>
+
+</html>
